@@ -1,33 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: rgb(70, 63, 224);
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(white,white);
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+button{
+  padding: 7px 25px;
+  border-radius: 15px;
+  color: white;
+}
+.heading {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+}
+.fpara{
+  line-height:60px;
+}
+.image{
+  transition: all 0.9s ease-in-out;
+}
+.image:hover{
+  transform: translateY(-20px);
+}
+.images{
+  background:var(--foreground-rgb);
+  position: relative;
+}
+.service-img{
+  opacity: 0.4;
+  position: relative;
+  transition: all 0.9s ease-in-out;
+}
+.center-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.service-img:hover{
+  opacity: 1;
+}
+@keyframes slider {
+  from
+  {
+    transform: translateX(100%);
   }
+  to
+  {
+    transform: translateX(0);
+  }
+}
+.logoes{
+  overflow-x: hidden;
+  padding: 60px 0 0 0 0;
+  white-space: nowrap;
+}
+.logoes:hover .logo-slider{
+animation-play-state: paused;
+}
+.logo-slider{
+  animation: 7s slider infinite ease-out;
+}
+.logo-slider img{
+  height:50px;
+  margin: 0 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+.circle {
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid var(--foreground-rgb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+}
+.circle::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: -1;
+}
+.choose-us{
+  position: absolute;
+margin: -50rem 10rem;
+}
+input , select{
+  width: 100%;
+  outline: none;
+  border-bottom: 2px solid gray;
+  margin: 20px 0px;
+}
+.industry{
+  margin-left:-82px;
 }
