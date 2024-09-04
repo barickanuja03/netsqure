@@ -8,7 +8,7 @@ function Contact() {
     <>
        <div className="flex justify-center bg-">
        <div className="lg:container">
-        <div className='mt-48 mb-48 flex flex-row justify-around align-middle max-h-max'>
+        <div className='mt-36 mb-48 flex flex-row justify-around align-middle max-h-max'>
           <div>
             <FaStarOfLife className='text-blue-800 text-2xl'/>
             <div className=' heading text-base font-bold break-all uppercase pb-5'> our contact
