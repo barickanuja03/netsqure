@@ -13,7 +13,7 @@ function Herosection() {
                         </div>
                         <div className='fpara text-5xl font-extrabold font-mono  mt-11'>Building  Scalable <br/>Digital Experience for<br /> Brands that Stands Out!
                         </div>
-                        <p className='text-normal text-gray-400 pt-7 w-96 transition   duration-500'>
+                        <p className='text-normal text-gray-400 pt-7 w-96'>
                             Transform your business with Netsqure. We are your trusted partner in navigating the digital landscape, offering expert guidance and exceptional services to help you succeed.
                         </p>
                         <div className='flex flex-row gap-x-6'>

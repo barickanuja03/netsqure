@@ -12,7 +12,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 body {
-  background: linear-gradient(white,white);
+  background: white;
   overflow-x: hidden;
 }
 
@@ -28,6 +28,31 @@ button{
 .fpara{
   line-height:60px;
 }
+@keyframes slider {
+  from
+  {
+    transform: translateX(-100%);
+  }
+  to
+  {
+    transform: translateX(0);
+  }
+}
+.logoes{
+  overflow-x: hidden;
+  padding: 30px 0 0 0;
+}
+.logoes:hover .logo-slider{
+animation-play-state: paused;
+}
+.logo-slider{
+  animation: 7s slider infinite ease-out;
+}
+.logo-slider img{
+  height:50px;
+  margin: 0 40px;
+}
+
 .image{
   transition: all 0.9s ease-in-out;
 }
@@ -40,8 +65,7 @@ button{
 }
 .service-img{
   opacity: 0.4;
-  position: relative;
-  transition: all 0.9s ease-in-out;
+  transition: all 0.9s;
 }
 .center-img{
   position: absolute;
@@ -51,31 +75,6 @@ button{
 }
 .service-img:hover{
   opacity: 1;
-}
-@keyframes slider {
-  from
-  {
-    transform: translateX(100%);
-  }
-  to
-  {
-    transform: translateX(0);
-  }
-}
-.logoes{
-  overflow-x: hidden;
-  padding: 60px 0 0 0 0;
-  white-space: nowrap;
-}
-.logoes:hover .logo-slider{
-animation-play-state: paused;
-}
-.logo-slider{
-  animation: 7s slider infinite ease-out;
-}
-.logo-slider img{
-  height:50px;
-  margin: 0 40px;
 }
 
 .container {
@@ -95,15 +94,13 @@ animation-play-state: paused;
   font-weight: bold;
   position: relative;
 }
-.circle::before {
+.circle::after {
   content: "";
   width: 100%;
   height: 100%;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
+  background-color: white;
   z-index: -1;
 }
 .choose-us{

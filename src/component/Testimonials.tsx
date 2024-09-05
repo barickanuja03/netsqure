@@ -31,7 +31,6 @@ function Testimonials() {
                     <h3 className="text-lg font-bold text-gray-800 text-center">EMMA LUTRA</h3>
                     <p className="text-sm text-gray-600 text-center pb-11">CEO</p>
                 </div>
-               
             </div>
             </div>
         </SwiperSlide>
